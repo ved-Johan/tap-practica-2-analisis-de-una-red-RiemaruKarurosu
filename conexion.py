@@ -1,5 +1,6 @@
 import os
-hostname = "www.itmorelia.edu.mx"
+red= "200.33.71.0/24"
+hostname = red
 
 respuesta = os.system("ping -c 1 " + hostname)
 
@@ -10,11 +11,11 @@ else:
 
 #deteccion de computadoras
 
-red= "192.168.0.0/24"
+red= "200.33.71.0/24"
 os.system("nmap -sP "+red)
 
 #deteccion de puertos abiertos
-computadora="192.168.0.6"
+computadora=red
 os.system("nmap -sT "+computadora)
 
 #Detectar sistema operativo
